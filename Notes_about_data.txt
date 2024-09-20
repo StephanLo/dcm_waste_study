@@ -1,0 +1,37 @@
+The data needed to reproduce this study.
+
+
+Put this data in data/aux_spatial_data
+-------------------------------------------------------------------------------
+# Gridded population data from GHSL
+  - Whole world data download: https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2020_GLOBE_R2023A_4326_3ss/V1-0/GHS_POP_E2020_GLOBE_R2023A_4326_3ss_V1_0.zip
+
+Schiavina M., Freire S., Carioli A., MacManus K. (2023) GHS-POP R2023A - GHS population grid multitemporal (1975-2030).**European Commission, Joint Research Centre (JRC)  
+doi:https://doi.org/10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE
+
+# Administrative boundaries.
+GADM 3.6 was used.
+whole world download: https://gadm.org/download_world36.html
+For downloading newer admin boundaries, or for specific countries: https://gadm.org/data.html
+
+# World bank countries: https://datacatalog.worldbank.org/search/dataset/0038272/World-Bank-Official-Boundaries
+continent: https://hub.arcgis.com/datasets/57c1ade4fa7c4e2384e6a23f2b3bd254_0/about
+
+--------------------------------------------------------------------------------
+
+
+# TDM30 DCM
+account is needed. data can be downloaded from DLR website. This is explained in their data guide.
+data guide: https://geoservice.dlr.de/web/dataguide/tdm30/
+download site: https://download.geoservice.dlr.de/TDM30_DCM/
+
+There are scripts to generate download links for DCM based on given AOI files. 
+The links can be downloaded using wget.
+Wget on windows: https://gnuwin32.sourceforge.net/packages/wget.htm
+
+wget code in a console that is opened in the same directory as yout txt file with download links:
+wget -i download_list.txt --auth-no-challenge --user=your_user_name --ask-password
+
+R script help to generate list of download links according to a given AOI (shp or gpkg file..)
+In Code/download_DCM.R
+
